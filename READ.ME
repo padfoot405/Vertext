@@ -1,0 +1,71 @@
+
+***************************************************MANUAL FOR THE CONTENTS OF THIS REPOSITORY***************************************************
+
+
+
+**CONTENTS**
+
+The folder "enterhere" contains three executable files.
+1. File "run" : For versioning the files passed as command line arguments.
+2. File "getver" : For accessing the previously saved versions of files passed as command line arguments.
+3. Hidden File ".reset" : To reset the "enterhere" directory in case the .file or .folder gets tampered externally.
+
+It also contains four hidden files.
+1. File ".code1.cpp" : C++ source code implementing the versioning workflow.
+2. File ".code2.cpp" : C++ source code implementing the additional feature of accessing previously saved versions.
+3. File ".file" : Text file to store the names of tracked files and number of saved versions of each file.
+4. File ".res.cpp" : C++ source code implementing the reset algorithm.
+
+It also contains a hidden directory ".folder", which stores the saved versions of each file and the hashes of the current versions.
+
+
+
+**INSTRUCTIONS**
+
+In order to execute a program,
+Type : "./<name_of_executable_file> <file1.txt> <file2.txt> ..."
+And press enter.
+
+It is strongly advised not to tamper any hidden entities externally, in order to avoid malfunctioning of the workflow.
+
+IN CASE THE .file OR .folder GETS TAMPERED EXTRNALLY,
+TYPE : "./.reset"
+AND PRESS ENTER
+
+
+
+**FUNCTIONALITY**
+
+On passing files to "run" program, it checks if it is already tracked.
+
+	If not, asks user whether to track.
+
+		If no, then terminates.
+
+		If yes, asks user whether to save current version and works accordingly.
+
+	If already tracked, then checks for any unsaved changes.
+
+		If no changes, then checks if there is atleast one saved version.
+
+			If no, then asks user whether to save current version and works accordingly.
+
+			If atleast one saved version present, then terminates.
+
+		If changes present, asks user whether to track changes.
+
+			If no, then terminates.
+
+			If yes, then asks user whether to save changes and works accordingly.
+
+
+On passing files to "getver" program, it checks number of saved versions of the file.
+
+	If no saved versions, then terminates.
+
+	If one saved version, then displays that version.
+
+	If more than one, then asks user for version number and displays accordingly.
+
+
+----------------------------------------------------------------------END-----------------------------------------------------------------------
