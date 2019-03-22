@@ -1,5 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
+void cushion()
+{
+	string cmd ="touch txt.txt";
+	system(cmd.c_str());
+}
 void cleanse()
 {
 	string cmd="rm .file *.*";
@@ -13,9 +18,12 @@ void remake()
 	system(cmd.c_str());
 	cmd="mkdir .folder";
 	system(cmd.c_str());
+	cmd="touch .folder/.ignore";
+	system(cmd.c_str());
 }
 int main()
 {
+	cushion();
 	cleanse();
 	remake();
 	return 0;
